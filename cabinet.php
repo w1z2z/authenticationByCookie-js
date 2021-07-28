@@ -11,20 +11,64 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="shortcut icon" href="favicon.png" type="image/png">
+    <title>User Page</title>
+    <link type="text/css" rel="stylesheet" href="/css/style.css"  media="screen,projection"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 </head>
 <body>
-    <h1>User Page</h1>
-    <button id="logout">exit</button>
-    <form>
-        <div>name: <input type="text" name="name" id="singup-name"></div>
-        <div>password: <input type="text" name="pass" id="singup-pass"></div>
-        <div>birthday: <input type="text" name="birthday" id="singup-birthday"></div>
-        <div>sex: <input type="text" name="birthday" id="singup-sex"></div>
-        <input type="submit" value="edit" id="red-submit">
-        <input type="submit" value="update" id="singup-submit">
-    </form>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 center-align">
+                <h1 class="user-cab-header">Кабинет пользователя</h1>
+            </div>
+            <div class="col-lg-12 center-align">
+                <button id="logout" class="material-icons-outlined btn deep-orange darken-4">Выйти</button>
+               
+            </div>
+        </div>
 
+        <div class="row" id="row-form">
+            <div class="col l6">
+                <form>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input id="singup-name" type="text" class="validate">
+                            <label class="active" for="singup-name">Имя</label>
+                        </div>
+                        <div class="input-field col s12">
+                            <input id="singup-pass" type="text" class="validate">
+                            <label class="active" for="singup-pass">Пароль</label>
+                        </div>
+                        <div class="input-field col s6">
+                            <input id="singup-birthday" type="text" class="datepicker">
+                            <label class="active" for="singup-birthday">Дата рождения</label>
+                        </div>
+                        <div class="input-field col s6">
+                            <input id="singup-sex" type="text" class="validate">
+                            <label class="active" for="singup-sex">Пол</label>
+                        </div>
+                        <div class="col s6 left-align">
+                            <input class="material-icons-outlined btn deep-orange darken-4" type="submit" value="Изменить" id="red-submit">
+                        </div>
+                        <div class="col s6 right-align">
+                            <input class="material-icons-outlined btn deep-orange darken-4" type="submit" value="Сохранить изменения" id="singup-submit">
+                        </div>
+                    <!-- <input type="submit" value="edit" id="red-submit"> -->
+ 
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <!--JavaScript at end of body for optimized loading-->
+    <script type="text/javascript" src="js/materialize.min.js"></script>
     <script src="script/ajax.js"></script>
     <script src="script/get_user_data.js"></script>
     <script src="script/logout.js"></script>
