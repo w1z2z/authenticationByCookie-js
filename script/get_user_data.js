@@ -33,7 +33,8 @@ function getCookie(cname) {
     }
     return "";
 }
-
+let arrJSON = 0;
+//Получение данных
 function getUserData(result){
     result = JSON.parse(result);
     // console.log(result);
@@ -44,6 +45,7 @@ function getUserData(result){
     M.updateTextFields();
 }
 
+//Кнопка сохранить изменения
 document.querySelector('#singup-submit').onclick = function (event) {
     event.preventDefault();
     let updateData = {
@@ -53,14 +55,21 @@ document.querySelector('#singup-submit').onclick = function (event) {
         "birthday" : document.querySelector('#singup-birthday').value,
         "sex" :  document.querySelector('#singup-sex').value
     };
-    ajax('core/update_user_data.php', 'POST', updateUserData, updateData);
+    // if (updateData.name == "" || arrJSON.password == "" || arrJSON.birthday == "" || arrJSON.sex == ""){
+    //     M.toast({html: 'Заполните все поля!'});
+    // } 
+    if(updateData['name'] == '' || updateData['pass'] == '' || updateData['birthday'] == '' || updateData['sex'] == ''){
+        M.toast({html: 'Заполните все поля!'});
+    } else {
+        ajax('core/update_user_data.php', 'POST', updateUserData, updateData);
+    }    
 }
 
 function updateUserData(result){
     if (document.querySelector('#singup-name').hasAttribute('disabled', 'disabled')){
         M.toast({html: 'Нажмити кнопку "Изменить" и внесите изменения!'});
     } else {
-        console.log(result);
+        // console.log(result);
         if(result == 1){
             M.toast({html: 'Данные успешно обновлены!'});
             disabledInput();
@@ -68,6 +77,7 @@ function updateUserData(result){
             M.toast({html: 'Ошибка обновления!'});
         } 
     }
+
 }
 
 //Блокировка полей ввода
@@ -77,7 +87,6 @@ function disabledInput() {
     document.querySelector('#singup-birthday').setAttribute('disabled', 'disabled');
     document.querySelector('#singup-sex').setAttribute('disabled', 'disabled');
     //Всплывающая подсказка
-
         let mouse = document.querySelector('#inputArea').onclick = function () {
             M.toast({html: 'Нажмити кнопку "Изменить" и внесите изменения!'});
         }
@@ -91,7 +100,7 @@ document.querySelector('#red-submit').onclick = function dis(event) {
     document.querySelector('#singup-birthday').removeAttribute('disabled', 'disabled');
     document.querySelector('#singup-sex').removeAttribute('disabled', 'disabled');
     let mouse = document.querySelector('#inputArea').onclick = function () {
-        M.toast({html: none});
+        
     }
 }
 

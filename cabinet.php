@@ -65,8 +65,6 @@
                             <input class="material-icons-outlined btn deep-orange darken-4" type="submit" value="Сохранить изменения" id="singup-submit">
                         </div>
                     </div>
-                    <!-- <input type="submit" value="edit" id="red-submit"> -->
- 
                 </form>
             </div>
             <div class="col s2"></div>
@@ -79,7 +77,6 @@
     <script src="script/ajax.js"></script>
     <script src="script/get_user_data.js"></script>
     <script src="script/logout.js"></script>
-    <script src="script/date.js"></script>
     
 </body>
 </html>
