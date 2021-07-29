@@ -25,11 +25,15 @@ document.querySelector('#singup-submit').onclick = function (event) {
     function singup (result){
         console.log(result);
         if (result == 2){
-            alert('Заполните все поля');
+            M.toast({html: 'Заполните все поля!'});
         } else if (result == 1){
-            alert('Вы зарегестрированы!');
+            M.toast({html: 'Вы успешно зарегестрированы!'});
+            document.querySelector('#singup-name').value = '';
+            document.querySelector('#singup-pass').value = '';
+            document.querySelector('#singup-email').value = '';
+            document.querySelector('#singup-birthday').value = '';
         } else {
-            alert('Ошибка, повторите регистрацию позже!');
+            M.toast({html: 'Ошибка, повторите регистрацию позже!'});
         }
     }
 }
@@ -48,9 +52,10 @@ document.querySelector('#login-submit').onclick = function (event) {
 
     function login (result){
         if (result == 2){
-            alert('Заполните все поля');
+            M.toast({html: 'Заполните все поля!'});;
         } else if (result == 0){
-            alert('Такой пользователь не найден!');
+            M.toast({html: 'Данный пользователь не найден!'});;
+            ;
         } else {
             console.log(result);
             result = JSON.parse(result);

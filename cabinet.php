@@ -34,35 +34,41 @@
         </div>
 
         <div class="row" id="row-form">
-            <div class="col l6">
+            <div class="col s2"></div>
+            <div class="col s8" center-align>
                 <form>
                     <div class="row">
-                        <div class="input-field col s12">
-                            <input id="singup-name" type="text" class="validate">
-                            <label class="active" for="singup-name">Имя</label>
-                        </div>
-                        <div class="input-field col s12">
-                            <input id="singup-pass" type="text" class="validate">
-                            <label class="active" for="singup-pass">Пароль</label>
-                        </div>
-                        <div class="input-field col s6">
-                            <input id="singup-birthday" type="text" class="datepicker">
-                            <label class="active" for="singup-birthday">Дата рождения</label>
-                        </div>
-                        <div class="input-field col s6">
-                            <input id="singup-sex" type="text" class="validate">
-                            <label class="active" for="singup-sex">Пол</label>
-                        </div>
+                        <div id="inputArea">
+                            <div class="input-field col s6">
+                                <input id="singup-name" type="text" class="validate">
+                                <label class="active" for="singup-name">Имя</label>
+                            </div>
+                            <div class="input-field col s6">
+                                <input id="singup-pass" type="text" class="validate">
+                                <label class="active" for="singup-pass">Пароль</label>
+                            </div>
+                            <div class="input-field col s6">
+                                <input id="singup-birthday" type="text" class="datepicker">
+                                <label class="active" for="singup-birthday">Дата рождения</label>
+                            </div>
+                            <div class="input-field col s6">
+                                <input id="singup-sex" type="text" class="validate">
+                                <label class="active" for="singup-sex">Пол</label>
+                            </div>
+                        </div>                        
+                        
                         <div class="col s6 left-align">
-                            <input class="material-icons-outlined btn deep-orange darken-4" type="submit" value="Изменить" id="red-submit">
+                            <input class="material-icons-outlined btn deep-orange darken-4" type="submit" value="Изменить данные" id="red-submit">
                         </div>
                         <div class="col s6 right-align">
                             <input class="material-icons-outlined btn deep-orange darken-4" type="submit" value="Сохранить изменения" id="singup-submit">
                         </div>
+                    </div>
                     <!-- <input type="submit" value="edit" id="red-submit"> -->
  
                 </form>
             </div>
+            <div class="col s2"></div>
         </div>
     </div>
 

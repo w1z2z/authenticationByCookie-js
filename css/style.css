@@ -1,18 +1,23 @@
 .user-cab-header{
     font-size: 22pt;
 }
-/* label {
-    display: none;
-    border: 1px solid #ccc;
-    background: #f1f1f1;
-    padding: 2px 5px;
-    margin: 0 0 0 4px;
-}
-.label-open{
-    display: inline-block;
-}
 #row-form{
-    display: flex;
-    justify-content: center;
     padding-top: 100px;
-} */
+}
+.container{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+}
+
+.form-reg{
+    display: flex;
+    flex-flow: column;
+}
+.btnReg{
+    margin-top: 100px;
+}
+h3{
+    text-align: center;
+}
+
