@@ -14,12 +14,13 @@
     <link rel="shortcut icon" href="favicon.png" type="image/png">
     <title>User Page</title>
     <link type="text/css" rel="stylesheet" href="/css/style.css"  media="screen,projection"/>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
-    <!--Import materialize.css-->
-    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
-    <!--Let browser know website is optimized for mobile-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 </head>
 <body>
     <div class="container">
@@ -78,5 +79,7 @@
     <script src="script/ajax.js"></script>
     <script src="script/get_user_data.js"></script>
     <script src="script/logout.js"></script>
+    <script src="script/date.js"></script>
+    
 </body>
 </html>

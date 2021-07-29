@@ -1,4 +1,5 @@
 disabledInput();
+
 //Стилизация календаря
 document.addEventListener('DOMContentLoaded', function() {
     let elems = document.querySelectorAll('.datepicker');
@@ -11,6 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     instances.minDate = null;
 });
+
 
 let userEmail = getCookie('email');
 // console.log(userEmail);

@@ -1,3 +1,17 @@
+//Стилизация календаря
+
+document.addEventListener('DOMContentLoaded', function() {
+    let elems = document.querySelectorAll('.datepicker');
+    let arr = [80, 10]
+    let instances = M.Datepicker.init(elems, {
+        "format" : 'yyyy-mm-dd',
+        "minDate" : new Date(1950,1,1),
+        "maxDate" : new Date(2021,10,10),
+        "yearRange" : arr[0]
+    });
+    instances.minDate = null;
+});
+
 document.querySelector('#singup-submit').onclick = function (event) {
     event.preventDefault();
     let name = document.querySelector('#singup-name').value;
