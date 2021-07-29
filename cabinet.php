@@ -52,10 +52,22 @@
                                 <input id="singup-birthday" type="text" class="datepicker">
                                 <label class="active" for="singup-birthday">Дата рождения</label>
                             </div>
+                              
                             <div class="input-field col s6">
-                                <input id="singup-sex" type="text" class="validate">
-                                <label class="active" for="singup-sex">Пол</label>
+                                <p>
+                                    <label >
+                                        <input id="singup-sex" type="radio" value="Муж" name="sex" class="sex" checked />
+                                        <span>Муж</span>
+                                    </label>
+                                    <label>
+                                        <input id="singup-sex" type="radio" value="Жен" name="sex" class="sex" />
+                                        <span>Жен</span>
+                                    </label>
+                                </p><br>
                             </div>
+                            
+                     
+  
                         </div>                        
                         
                         <div class="col s6 left-align">

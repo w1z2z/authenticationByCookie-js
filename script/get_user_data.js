@@ -55,9 +55,6 @@ document.querySelector('#singup-submit').onclick = function (event) {
         "birthday" : document.querySelector('#singup-birthday').value,
         "sex" :  document.querySelector('#singup-sex').value
     };
-    // if (updateData.name == "" || arrJSON.password == "" || arrJSON.birthday == "" || arrJSON.sex == ""){
-    //     M.toast({html: 'Заполните все поля!'});
-    // } 
     if(updateData['name'] == '' || updateData['pass'] == '' || updateData['birthday'] == '' || updateData['sex'] == ''){
         M.toast({html: 'Заполните все поля!'});
     } else {
@@ -85,7 +82,9 @@ function disabledInput() {
     document.querySelector('#singup-name').setAttribute('disabled', 'disabled');
     document.querySelector('#singup-pass').setAttribute('disabled', 'disabled');
     document.querySelector('#singup-birthday').setAttribute('disabled', 'disabled');
-    document.querySelector('#singup-sex').setAttribute('disabled', 'disabled');
+    document.querySelectorAll('#singup-sex').forEach(function(element) {
+        element.setAttribute('disabled', 'disabled')
+    });
     //Всплывающая подсказка
         let mouse = document.querySelector('#inputArea').onclick = function () {
             M.toast({html: 'Нажмити кнопку "Изменить" и внесите изменения!'});
@@ -98,7 +97,9 @@ document.querySelector('#red-submit').onclick = function dis(event) {
     document.querySelector('#singup-name').removeAttribute('disabled', 'disabled');
     document.querySelector('#singup-pass').removeAttribute('disabled', 'disabled');
     document.querySelector('#singup-birthday').removeAttribute('disabled', 'disabled');
-    document.querySelector('#singup-sex').removeAttribute('disabled', 'disabled');
+    document.querySelectorAll('#singup-sex').forEach(function(element) {
+        element.removeAttribute('disabled', 'disabled')
+    });
     let mouse = document.querySelector('#inputArea').onclick = function () {
         
     }
