@@ -29,7 +29,7 @@
                 <h1 class="user-cab-header">Кабинет пользователя</h1>
             </div>
             <div class="col-lg-12 center-align">
-                <button id="logout" class="material-icons-outlined btn deep-orange darken-4">Выйти</button>
+                <button id="logout" class="material-icons-outlined btn">Выйти</button>
                
             </div>
         </div>
@@ -71,10 +71,10 @@
                         </div>                        
                         
                         <div class="col s6 left-align">
-                            <input class="material-icons-outlined btn deep-orange darken-4" type="submit" value="Изменить данные" id="red-submit">
+                            <input class="material-icons-outlined btn" type="submit" value="Изменить данные" id="red-submit">
                         </div>
                         <div class="col s6 right-align">
-                            <input class="material-icons-outlined btn deep-orange darken-4" type="submit" value="Сохранить изменения" id="singup-submit">
+                            <input class="material-icons-outlined btn" type="submit" value="Сохранить изменения" id="singup-submit">
                         </div>
                     </div>
                 </form>
